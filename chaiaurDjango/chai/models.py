@@ -22,6 +22,8 @@ class ChaiVariety(models.Model):
     image = models.ImageField(upload_to='chai_varieties/')
     date_added = models.DateTimeField(default=timezone.now)
     type = models.CharField(max_length=20, choices=CHAI_TYPE_CHOICES)
+    description = models.TextField(default='')
+    # price = models.DecimalField(max_digits=6, decimal_places=2)
     
     def __str__(self):
         return self.name
