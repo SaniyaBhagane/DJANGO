@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Chai Details Page
+{% endblock %}
+
+{% block content %}
+<div class="max-w-xl mx-auto mt-10 bg-blue-100 p-6 rounded shadow text-black">
+    <h1 class="text-3xl font-bold mb-4">{{ chai.name }}</h1>
+    <img src="{{ chai.image.url }}" 
+         alt="{{ chai.name }}" 
+         class="rounded mb-4 w-full h-64 object-cover">
+
+    <p class="text-lg"><strong>Type:</strong> {{ chai.type }}</p>
+    <p><strong>Description: </strong>{{ chai.description }}</p>
+    <p class="text-lg"><strong>Date Added:</strong> {{ chai.date_added }}</p>
+
+    <a href="{% url 'All_Chai' %}" 
+       class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+        ← Back to all chai
+    </a>
+</div>
+{% endblock %}
