@@ -7,8 +7,8 @@ Home Page
 
 <div class= 'grid grid-cols-3 gap-4 m-5'>
     {% for chai in chai  %}
-    <div class="chai-item bg-blue-200 p-5 text-black img-center rounded">
-        <img class="rounded shadow-lg" src="{{chai.image.url}}" alt="">
+    <div class="chai-item bg-blue-200 p-6 text-black img-center rounded">
+        <img class="w-full h-48 object-cover rounded shadow-lg" src="{{chai.image.url}}" alt="">
         <h2 class="text-2xl font-bold">Name: {{ chai.name }}</h2>
         <p>Type: {{ chai.type }}</p>
         <p>Date Added: {{ chai.date_added }}</p>

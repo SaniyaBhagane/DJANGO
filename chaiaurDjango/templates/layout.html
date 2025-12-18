@@ -10,10 +10,38 @@
     {% tailwind_css %}
 </head>
 <body>
-    <nav>This is our nav bar</nav>
+    <nav class="bg-blue-900 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="{% url 'All_Chai' %}" class="text-2xl font-bold tracking-wide text-black-400">
+                ☕ ChaiWala
+            </a>
+            <div class="space-x-6">
+                <a href="{% url 'All_Chai' %}" class="hover:text-blue-200 transition">
+                    Home
+                </a>
+                <a href="#" class="hover:text-blue-200 transition">
+                    About
+                </a>
+                <a href="#" class="hover:text-blue-200 transition">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
 
     {% block content %}{% endblock %}
 
-    <footer>This is our footer</footer>
+    <footer class="bg-blue-700 text-white mt-10">
+        <div class="max-w-7xl mx-auto px-6 py-6 text-center">
+            <p class="text-sm">
+                © 2025 ChaiWala ☕ | Made with ❤️ using Django & Tailwind
+            </p>
+            <div class="mt-2 space-x-4 text-sm">
+                <a href="#" class="hover:text-blue-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-300">Terms</a>
+                <a href="#" class="hover:text-blue-300">Support</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
