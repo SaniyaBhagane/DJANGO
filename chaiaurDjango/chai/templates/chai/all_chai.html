@@ -3,17 +3,21 @@
 Home Page
 {% endblock %}
 {% block content %}
+<br>
 <h1>All The Chai for YOUU | Website</h1> 
-
+<br>
 <div class= 'grid grid-cols-3 gap-4 m-5'>
     {% for chai in chai  %}
     <div class="chai-item bg-blue-200 p-6 text-black img-center rounded">
         <img class="w-full h-48 object-cover rounded shadow-lg" src="{{chai.image.url}}" alt="">
+        <br>
         <h2 class="text-2xl font-bold">Name: {{ chai.name }}</h2>
         <p>Type: {{ chai.type }}</p>
         <p>Date Added: {{ chai.date_added }}</p>
+        <br>
         <a href="{% url 'Chai_Detail' chai.id %}" type="button" class="inline-flex items-center w-[100%] justify-center px-4 py-2 border-transparent text-sm font-medium bg-blue-500 hover:bg-blue-700 text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                {{chai.type}}-{{chai.id}} Details
+                {% comment %} {{chai.type}}-{{chai.id}} {% endcomment %}
+                 Details
         </a>
     </div>
     {% endfor %}
